@@ -1,0 +1,127 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<title>SafeRides</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.css" />
+
+	<!-- Insert JQM Themes below to change look/feel of application -->
+	<link rel="stylesheet" href="themes/SafeRidesTheme.css" /> 
+
+	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>
+</head>
+
+<body>
+
+<!-- LOGIN -->
+<div data-role="page" id="signup-login">
+
+	<div data-role="content">
+		
+		<!-- logo -->
+		<img src="images/SafeRidesLogo.png" style="padding-top:50px; padding-bottom:50px;">
+		
+		<!-- buttons -->
+		<div data-role="controlgroup">
+			<a href="#register" data-role="button">Sign Up!</a>
+			<a href="#login" data-role="button">Log In!</a>
+		</div>
+		
+		<!-- checkbox -->
+		<form>
+    		<input type="checkbox" name="signed-in" id="stay-signed-in" data-mini="true">
+			<label for="stay-signed-in" data-inline="true">Keep me signed in</label>
+		</form>
+
+	</div>
+
+</div>
+
+<!-- SIGN UP PAGE -->
+<div data-role="page" id="register">
+
+	<div data-role="content">
+
+		<!-- back button -->
+		<a href="#signup-login" data-role="button" data-icon="back" data-iconpos="notext" data-inline="true">Back</a>
+
+		<h1 style="text-align:center;">Sign Up</h1>
+
+		<!-- input fields -->
+		<div data-role="fieldcontain">
+    		<label for="eid-input-signup">E-id:</label>
+    			<input type="text" name="eid" id="eid-input-signup" class="text-input" value="">
+    		<label for="jac-input-signup">JAC #:</label>
+    			<input type="text" name="jac" id="jac-input-signup" class="text-input" value="">
+    		<label for="phone-input-signup">Phone #:</label>
+    			<input type="text" name="phone" id="phone-input-signup" class="text-input" value="">
+    		<label for="name-input-signup">Name:</label>
+    			<input type="text" name="name" id="name-input-signup" class="text-input" value="">
+		</div>
+
+		<!-- button -->
+		<a href="#index" style="text-decoration:none;"><div data-role="button">Submit!</div></a>
+
+	</div>
+
+</div>
+
+<!-- HOME PAGE -->
+<div data-role="page" id="index">
+	
+	<div data-role="content">
+
+		<!-- logo -->
+		<img src="images/SafeRidesLogo.png" style="padding-top:50px; padding-bottom:50px;">
+
+		<!-- buttons -->
+		<div data-role="controlgroup">
+			<a href="#get-ride" data-role="button">Catch-A-Ride!</a>
+			<a href="#edit-info" data-role="button">Edit Info</a>
+			<a href="#signup-login" data-role="button">Logout</a>
+		</div>
+
+	</div>
+
+</div>
+
+<!--EDIT INFO PAGE -->
+<div data-role="page" id="edit-info">
+
+
+	<div data-role="content">
+		
+		<!-- Back Button -->
+		<a href="#index" data-role="button" data-icon="back" data-iconpos="notext" data-inline="true">Back</a>
+
+		<!-- Personal Content Edit -->
+		<div data-role="fieldcontent">
+			<h3>Personal Info:</h3>
+			<label for="name-input-info">Name:</label>
+				<input type="text" name="name" id="name-input-info" class="text-input" value="">
+			<label for="phone-input-info">Phone #:</label>
+				<input type="text" name="phone" id="phone-input-info" class="text-input" value="">
+		</div>
+
+		<!-- Locations Edit -->
+		<div data-role="fieldcontent">
+			<h3>Locations:</h3>
+			<label for="name-address-input-info">Name:</label>
+				<input type="text" name="name" id="name-address-input-info" class="text-input" value="">
+			<label for="address-input-info">Phone #:</label>
+				<input type="text" name="phone" id="address-input-info" class="text-input" value="">
+		</div>
+
+		<!-- Submit -->
+		<a href="#index"><div data-role="button" style="margin-top:30px;">Submit</div></a>
+
+	</div>
+
+</div>
+
+</body>
+
+</html>
