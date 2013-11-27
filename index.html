@@ -16,25 +16,20 @@
 
 <body>
 
-<!-- LOGIN -->
+<!-- SIGNUP-LOGIN PAGE -->
 <div data-role="page" id="signup-login">
 
 	<div data-role="content">
 		
-		<!-- logo -->
-		<img src="images/SafeRidesLogo.png" style="padding-top:50px; padding-bottom:50px;">
+		<!-- Logo -->
+		<img src="images/SafeRidesLogo.png" style="padding-top:50px; padding-bottom:25px;">
+		<hr color="white" />
 		
-		<!-- buttons -->
+		<!-- Buttons -->
 		<div data-role="controlgroup">
 			<a href="#register" data-role="button">Sign Up!</a>
 			<a href="#login" data-role="button">Log In!</a>
 		</div>
-		
-		<!-- checkbox -->
-		<form>
-    		<input type="checkbox" name="signed-in" id="stay-signed-in" data-mini="true">
-			<label for="stay-signed-in" data-inline="true">Keep me signed in</label>
-		</form>
 
 	</div>
 
@@ -45,25 +40,78 @@
 
 	<div data-role="content">
 
-		<!-- back button -->
+		<!-- Back Button -->
 		<a href="#signup-login" data-role="button" data-icon="back" data-iconpos="notext" data-inline="true">Back</a>
 
+		<!-- Header -->
 		<h1 style="text-align:center;">Sign Up</h1>
+		<hr color="white" />
 
-		<!-- input fields -->
+		<!-- Input Fields -->
 		<div data-role="fieldcontain">
+			<label for="name-input-signup">Name:</label>
+    			<input type="text" name="name" id="name-input-signup" class="text-input">
     		<label for="eid-input-signup">E-id:</label>
-    			<input type="text" name="eid" id="eid-input-signup" class="text-input" value="">
+    			<input type="text" name="eid" id="eid-input-signup" class="text-input">
     		<label for="jac-input-signup">JAC #:</label>
-    			<input type="text" name="jac" id="jac-input-signup" class="text-input" value="">
+    			<input type="text" name="jac" id="jac-input-signup" class="text-input">
     		<label for="phone-input-signup">Phone #:</label>
-    			<input type="text" name="phone" id="phone-input-signup" class="text-input" value="">
-    		<label for="name-input-signup">Name:</label>
-    			<input type="text" name="name" id="name-input-signup" class="text-input" value="">
+    			<input type="text" name="phone" id="phone-input-signup" class="text-input">
 		</div>
 
-		<!-- button -->
-		<a href="#index" style="text-decoration:none;"><div data-role="button">Submit!</div></a>
+		<!-- Submit Button -->
+		<a href="#register-thankyou" data-role="button">Submit!</a>
+
+	</div>
+
+</div>
+
+<!-- LOGIN PAGE -->
+<div data-role="page" id="login">
+
+	<div data-role="content">
+
+		<!-- Back Button -->
+		<a href="#signup-login" data-role="button" data-icon="back" data-iconpos="notext" data-inline="true">Back</a>
+
+		<!-- Logo -->
+		<img src="images/SafeRidesLogo.png" style="padding-top:50px; padding-bottom:25px;">
+		<hr color="white" />
+
+		<!-- Input Fields -->
+		<div data-role="fieldcontent">
+			<h3>Credentials:</h3>
+			<label for="name-input-info">E-id:</label>
+				<input type="text" name="name" id="name-input-login" class="text-input">
+			<label for="phone-input-info">Password:</label>
+				<input type="password" name="phone" id="password-input-login" class="text-input" autocomplete="off">
+		</div>
+
+		<!-- Checkbox -->
+		<form>
+    		<input type="checkbox" name="signed-in" id="stay-signed-in" data-mini="true">
+			<label for="stay-signed-in" data-inline="true">Keep me signed in</label>
+		</form>
+
+		<!-- Submit Button -->
+		<a href="#index" data-role="button">Submit!</a>
+
+	</div>
+
+</div>
+
+<!-- THANK YOU PAGE -->
+<div data-role="page" id="register-thankyou">
+
+	<div data-role="content">
+
+		<!-- Image and thank you -->
+		<img src="images/SafeRidesLogo.png" style="padding-top:50px; padding-bottom:50px;" />
+		<hr color="white" />
+
+		<h2>Thank you for registering!</h2>
+
+		<a href="#index" data-role="button">Get rides!</a>
 
 	</div>
 
@@ -74,10 +122,10 @@
 	
 	<div data-role="content">
 
-		<!-- logo -->
+		<!-- Logo -->
 		<img src="images/SafeRidesLogo.png" style="padding-top:50px; padding-bottom:50px;">
 
-		<!-- buttons -->
+		<!-- Buttons -->
 		<div data-role="controlgroup">
 			<a href="#get-ride" data-role="button">Catch-A-Ride!</a>
 			<a href="#edit-info" data-role="button">Edit Info</a>
@@ -88,7 +136,7 @@
 
 </div>
 
-<!--EDIT INFO PAGE -->
+<!-- EDIT INFO PAGE -->
 <div data-role="page" id="edit-info">
 
 
@@ -101,22 +149,69 @@
 		<div data-role="fieldcontent">
 			<h3>Personal Info:</h3>
 			<label for="name-input-info">Name:</label>
-				<input type="text" name="name" id="name-input-info" class="text-input" value="">
+				<input type="text" name="name" id="name-input-info" class="text-input">
 			<label for="phone-input-info">Phone #:</label>
-				<input type="text" name="phone" id="phone-input-info" class="text-input" value="">
+				<input type="text" name="phone" id="phone-input-info" class="text-input" placeholder="(xxx) xxx-xxxx">
 		</div>
 
 		<!-- Locations Edit -->
 		<div data-role="fieldcontent">
 			<h3>Locations:</h3>
-			<label for="name-address-input-info">Name:</label>
-				<input type="text" name="name" id="name-address-input-info" class="text-input" value="">
-			<label for="address-input-info">Phone #:</label>
-				<input type="text" name="phone" id="address-input-info" class="text-input" value="">
+			<label for="name-address-input-info">Name for Location:</label>
+				<input type="text" name="name" id="name-address-input-info" class="text-input">
+			<label for="address-input-info">Address:</label>
+				<input type="tel" name="address" id="address-input-info" class="text-input">
 		</div>
 
-		<!-- Submit -->
-		<a href="#index"><div data-role="button" style="margin-top:30px;">Submit</div></a>
+		<!-- Submit Button -->
+		<a href="#index"><div data-role="button" style="margin-top:30px;">Save Info</div></a>
+
+	</div>
+
+</div>
+
+<!-- GET RIDE PAGE -->
+<div data-role="page" id="get-ride">
+
+	<div data-role="content">
+
+		<!-- Back button -->
+		<a href="#index" data-role="button" data-icon="back" data-iconpos="notext" data-inline="true">Back</a>
+
+		<!-- Header -->
+		<h1 style="text-align:center;">Catch-a-Ride!!!</h1>
+		<hr color="white" />
+
+		<!-- Input Fields -->
+		<div data-role="fieldcontain">
+			<label for="to-destination">To:</label>
+				<input type="text" name="to-destination" id="to-destination" class="text-input">
+			<label for="from-destination">From:</label>
+				<input type="text" name="from-destination" id="from-destination" class="text-input">	
+		</div>
+
+		<!--Submit Button -->
+		<a href="#get-ride-thankyou" data-role="button">Submit!</a>
+
+	</div>
+
+</div>
+
+<!-- THANK YOU RIDE PAGE -->
+<div data-role="page" id="get-ride-thankyou">
+
+	<div data-role="content">
+
+		<!-- Logo -->
+		<img src="images/SafeRidesLogo.png" style="padding-top:50px; padding-botom:50px;" />
+		<hr color="white" />
+
+		<!-- Thank you message -->
+		<h2 style="text-align:center;">Thank you!</h2> 
+		<p>You will recieve a call when your ride has arrived.</p>
+
+		<!-- Home button -->
+		<a href="#index" data-role="button">Home</a>
 
 	</div>
 

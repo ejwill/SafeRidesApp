@@ -9,12 +9,26 @@
 *
 */
 
-/* SafeRides Edit */
+/* SafeRides Edits */
 #eid-input, 
 #jac-input, 
 #phone-input, 
 #name-input {
-	color:#505050;
+	color: #505050;
+}
+
+img {
+	display:block;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+#break {
+	color: #ffffff;
+}
+
+input.ui-input-text {
+	color:black;
 }
 
 /* Swatches */
